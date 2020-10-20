@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin-top: 60px;
+  font-family: "Poppins", sans-serif;
+  color: #f3f3f3;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0px;
+}
+
+/*Fixed background technique that causes a paralax effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(51, 158, 230, 0.7),
+      rgba(94, 231, 53, 0.2)
+    ),
+    url(./images//surveybg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: right center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 0 auto;
+
+  width: 100%;
+}
+
+
+
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header__title {
+  font-size: 5rem;
+}
+
+
+@media (max-width: 1024px) {
+  .header__title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__title {
+    font-size: 2rem;
+  }
+
+}
+
+
+.header__title,
+.header__subtitle {
+  color: rgb(26, 19, 19);
+  margin: 0 0 10px 0px;
+  text-shadow: 5px 5px 10px rgba(8, 85, 173, 1);
+}
+
+.header__logo {
+  width: 12rem;
+  fill: rgb(20, 19, 26);
+  -webkit-filter: drop-shadow( 5px 5px 10px rgba(8, 85, 173, 1));
+  filter: drop-shadow( 5px 5px 10px rgba(8, 85, 173, 1));
+}
+
+
+.form-box {
+  background-color: rgba(18, 63, 94, 0.8);
+  padding: 2.5rem;
+  border-radius: 10px;
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .form-box {
+    width: 100%;
+  }
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+
+.form__control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(8, 29, 2, 0.5);
+  transition: border-color 0.15s ease-in-out;
+}
+
+.form__control:focus {
+  outline: none;
+  border-color: rgba(94, 231, 53, 0.5);
+}
+
+.form__textarea {
+  min-height: 120px;
+  padding: 0.625rem;
+  resize: vertical;
+
+}
+
+.form__radio, .form__checkbox {
+  margin-right: 0.625rem;
+  min-width: 1.2rem;
+  min-height: 1.2rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+.form__group p {
+  margin-bottom: 0.4rem;
+}
+
+.form__group .form__choicetext {
+  margin-bottom: 1rem;
+
+}
+
+.form__submit {
+  color: inherit;
+  background-color: rgb(89, 167, 65);
+  padding: 0.6rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.form__submit:hover {
+  background-color: rgb(137, 235, 107);
+}
+
+button {
+  border: none;
+}
